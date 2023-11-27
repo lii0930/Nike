@@ -1,0 +1,46 @@
+h1{
+        font-family: 'Anton',sans-serif;
+        text-align: left;
+        font-size: 1000%;
+        background: linear-gradient(to right, #ea5a36, #8658c3,#2950db, #2ab7a9 80%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+
+}
+h2{
+    font-size: large;
+    text-align: left;
+}
+h3{
+    font-family: 'Anton',sans-serif;
+    text-align: center;
+    font-size: 600%;
+
+}
+.hi{
+        font-family: 'Anton',sans-serif;
+        text-align: center;
+        font-size: 350%;
+        color: white;
+}
+h5{
+    font-family: 'Anton',sans-serif;
+    text-align: justify;
+    font-size: 500%;
+    color: white;
+}
+.nike{
+    font-size: x-large;
+    text-align: justify;
+    background-color: none;
+    /* font-weight: bold; */
+}
+.foot{
+    font-family: 'Oswald',sans-serif;
+    text-align: justify;
+}
+a{
+    text-decoration: none;
+}

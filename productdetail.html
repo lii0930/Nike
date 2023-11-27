@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike. Just do it</title>
+  <link rel="icon" href="anh/2.gif" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="id.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.min.js"></script>
+  <script src="index.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Dosis:wght@200&family=Oswald&family=Quicksand:wght@300;400&family=Raleway:wght@200&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row mt-3">
+      <div class="col-1">
+        <div class="d-flex flex-column">
+          <img class="mb-2 border border-2 border-Secondary" src="{{products[index].anh1}}" alt="" width="100%">
+          <img class="mb-2 border border-2 border-Secondary" src="{{products[index].anh2}}" alt="" width="100%">
+          <img class="mb-2 border border-2 border-Secondary" src="{{products[index].anh3}}" alt="" width="100%">
+          <img class="mb-2 border border-2 border-Secondary" src="{{products[index].anh4}}" alt="" width="100%">
+          <img class="mb-2 border border-2 border-Secondary" src="{{products[index].anh5}}" alt="" width="100%">
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-2">
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- <div class="carousel-item">
+                <video class="d-block w-75 me-0 ps-5 ms-5" src="{{products[index].video}}" autoplay controls></video>
+              </div> -->
+              <div class="carousel-item active">
+                <img src="{{products[index].anh6}}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{products[index].anh7}}" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="{{products[index].anh8}}" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+              data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-5">
+        <div class="col-md-12">
+          <p class="fw-bolder fs-3 mb-0">{{products[index].name}}</p>
+          <p class="fs-5">{{products[index].kind}}</p>
+          <div class="row">
+            <div class="d-flex">
+              <p class="text-dark fs-5 fw-bold">{{products[index].price}} <sup class="text-decoration-underline">đ</sup></p>
+              <p class="text-secondary text-decoration-line-through ms-3 fs-6">{{products[index].sell}} <sup class="text-decoration-underline">đ</sup></p>
+              <p class="text-success fs-6 fw-bolder justify-content-end mt-1 ms-2"> &ensp; Giảm {{(products[index].price/(products[index].sell))|number:0}} %</p>
+            </div>
+          </div>
+          <p class="fs-6 fw-bold mb-1">Thông tin sản phẩm</p>
+          <p style="text-align: justify;" class="mb-1">It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a
+            more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it
+            look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum.</p>
+          <ul>
+            <li>Màu sắc: Trắng</li>
+            <li>Phong cách: Ngày thường</li>
+          </ul>
+        </div>
+
+        <div class="d-flex mb-3">
+          <div class="col-md-12">
+            <p class="fs-6 fw-bold">Kích thước </p>
+            <div class="row">
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" value="32" checked>
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio1">32</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" value="33">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio2">33</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio3">34</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio4">35</label>
+
+              </div>
+            </div>
+
+            <div class="row mt-2">
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio5" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio5">36</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio6" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio6">37</label>
+
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio7" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio7">38</label>
+
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio8" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio8">39</label>
+
+
+              </div>
+            </div>
+            <div class="row mt-2">
+              <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio9" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio9">40</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio10" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio10">41</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio11" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio11">42</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio12" autocomplete="off">
+                <label class="btn btn-outline-dark ps-5 pe-5 pt-2 pb-2 rounded me-2 justify-content-center"
+                  for="btnradio12">43</label>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="d-flex justify-content-center mt-3  ms-3 me-4">
+            <a class="btn btn-dark rounded-pill w-100 pt-3 pb-3"ng-click="addToCart(products[index])">Thêm vào giỏ hàng</a>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="d-flex justify-content-center mt-2  ms-3 me-4">
+            <a href="#" class="btn btn-outline-dark rounded-pill w-100 pt-3 pb-3">Thêm vào yêu thích <i
+                class="fa-regular fa-heart"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row mt-3">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Hướng dẫn đo kích thước
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li>Đo chân và chọn size vừa với chân bạn, nhưng chúng tôi khuyến khích các bạn nên tăng lên từ phân nửa
+                  tới 1 size</li>
+                <li class="fw-bold">Bảng đo size</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Chính sách giao và trả hàng
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              Đơn hàng từ 5.000.000đ trở lên sẽ được giao hàng miễn phí
+              <ul>
+                <li>Giao hàng tiêu chuẩn từ 4-5 ngày</li>
+                <li>Giao hàng nhanh sẽ từ 2-4 ngày</li>
+              </ul>
+              <p>Đơn hàng sẽ được tiếp nhận và xử lý từ các ngày thứ 2 đến thứ 6 hàng tuần (trừ lễ)</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+              data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              ĐÁNH GIÁ VÀ NHẬN XÉT &ensp;<i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i
+                class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i> <i class="fa-regular fa-star-half-stroke"></i>
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">Chưa có nhận xét nào.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5">
+        <h2>Sản phẩm tương tự</h2>
+        <div class="d-flex justify-content-evenly">
+          <div class="col-4" ng-repeat="p in products|limitTo:3">
+            <div class="card card-body border-0 me-3">
+              <img width="100%" src="{{p.anh}}" class="img-fluid" />
+              <a href="#">
+                <h2 class="card-title text-dark mt-2">{{p.name}}</h2>
+                <p class="card-text text-secondary mb-1">{{p.kind}}</p>
+                <p class="card-text text-secondary mb-1">{{p.color}}</p>
+                <div class="d-flex justify-content-between">
+                  <p class="card-text text-decoration-line-through text-secondary mb-1">{{p.price}}</p>
+                  <p class="card-text text-danger fw-bolder">{{p.sell}}</p>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                  <a href="#!" class="btn btn-outline-dark" ng-click="addToCart(products)">Thêm vào giỏ hàng</a>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
